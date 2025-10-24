@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simon Says: Word Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        </style>
+</head>
+<body>
+    <h1>Simon Says: Word Edition</h1>
+    <button id="progressBtn" onclick="goToProgress()">View Progress</button>
+    <div id="scoreboard">
+        <p>Round: <span id="round">1</span></p>
+        <p>Score: <span id="score">0</span></p>
+        <p>Highest Score: <span id="high-score">0</span></p>
+      </div>
+      
+      
+
+    <div id="word-sequence">Press "Start Game" to begin!</div>
+
+    <button id="start-btn">Start Game</button>
+
+    <div id="score"></div>
+
+    <div id="error-message"></div>
+    <div id="try-again-bar" style="display: none;">
+        <button onclick="tryAgain()">Try Again</button>
+    </div>
+    
+
+    <script src="game.js"></script>
+
+    <script>
+        const theme = localStorage.getItem('selectedTheme');
+        if (theme) {
+            document.body.style.backgroundImage = `url('${theme}')`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundRepeat = 'no-repeat';
+        }
+    </script>
+</body>
+</html>

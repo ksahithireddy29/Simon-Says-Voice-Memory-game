@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simon Says - Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Your Progress</h1>
+
+    <h2 id="games-played">Games Played: 6</h2>
+
+
+    <canvas id="progressChart" width="300" height="100"></canvas>
+
+    <button id="backBtn" onclick="goBackToGame()">Back to Game</button>
+    <button id="reset" onclick="localStorage.clear(); location.reload();">Reset Progress</button>
+
+
+    <script src="progress.js"></script>
+</body>
+</html>

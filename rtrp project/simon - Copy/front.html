@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simon Says - Choose Theme</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        </style>
+</head>
+<body>
+    <div class="background-overlay">
+        <h1>Simon Says - Choose Theme</h1>
+        <div class="theme-container">
+            <div class="theme-card" onclick="selectTheme('images/valleys.jpg')">
+                <img src="images/valleys.jpg" alt="Valleys">
+                <p>Valleys</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/devils_land.avif')">
+                <img src="images/devils_land.avif" alt="Devil's Land">
+                <p>Devil's Land</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/space.avif')">
+                <img src="images/space.avif" alt="Space">
+                <p>Space</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/alien_land.avif')">
+                <img src="images/alien_land.avif" alt="Alien Land">
+                <p>Alien Land</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/mountains.jpg')">
+                <img src="images/mountains.jpg" alt="Mountains">
+                <p>Mountains</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/dark.png')">
+                <img src="images/dark.png" alt="Dark Theme">
+                <p>Dark Theme</p>
+            </div>
+            <div class="theme-card" onclick="selectTheme('images/nature.avif')">
+                <img src="images/nature.avif" alt="Nature">
+                <p>Nature</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* Make the background image fit the screen */
+body {
+    background-image: url('images/simon.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: darkslategray;
+    padding: 0px;
+}
+
+
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.15); /* semi-transparent black overlay */
+    backdrop-filter: blur(4px); /* optional blur for glass effect */
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Optional: dark overlay for better text visibility */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 200px;
+}
+
+#word-sequence {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    margin-top: 20px;
+    color: yellow;
+}
+
+/* Extra CSS for the landing page */
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2rem;
+}
+
+.theme-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.theme-card {
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.theme-card p {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.theme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+#scoreboard {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    z-index: 10;
+    margin-top: 60px;
+    color: black;
+}
+
+#progressBtn {
+    position: fixed; 
+  top: 10px; 
+  right: 10px; 
+  background-color: transparent;
+  border: 2px solid #ffffff; 
+  border-radius: 100px;
+  color: #ffffff; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#progressBtn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  color: #fff; 
+}
+
+#backBtn {
+    position: fixed; 
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid #fbf8f8; 
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#backBtn:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+  color: #fff;
+}
+
+#gamesPlayed {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+#progressChart {
+    margin-top: 30px;
+    max-width: 90%; /* Responsive width */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 251, 251, 0.25); /* Soft shadow for the chart */
+    background-color: #b5aeaec9;
+    margin-bottom: 30px;
+  }
+
+  #reset {
+    background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid #fbf8f8; 
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  }
+
+  #b {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: "Press Start 2P", system-ui;
+  }
+
+  #play {
+    margin-bottom: 150px;
+    background-color: transparent;
+  border-radius: 100px;
+  border: 2px solid #fbf8f8; 
+  color: #ffffff;
+  padding: 20px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Press Start 2P", system-ui;
+  }
+
+  #play:hover {
+    background-color: rgba(255, 255, 255, 0.25); 
+  color: #fff;
+}
+
+#try-again-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#try-again-bar button {
+    background-color: #ff5555;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+}
